@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>계산기</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        #calculator {
-            background-color: #ffffff;
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        h3 {
-            color: #333;
-        }
-        #exp {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        #result {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        #calculate-button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #calculate-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <script>
-        function calculate() {
-            let exp = document.getElementById("exp");
-            let result = document.getElementById("result");
-            try {
-                result.value = eval(exp.value);
-            } catch (error) {
-                result.value = "잘못된 입력입니다";
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>계산기</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                text-align: center;
+                margin: 0;
+                padding: 0;
             }
-        }
-    </script>
-</head>
-<body>
-    <div id="calculator">
-        <h3>계산기</h3>
-        <hr>
-        <p>계산하고자 하는 수식을 입력하고 계산 버튼을 누르시오.</p>
-        <form>
-            <input type="text" id="exp" placeholder="수식입력">
-            <input type="text" id="result" placeholder="결과" >
-            <input type="button" value="Calculate" id="calculate-button" onclick="calculate()">
-        </form>
-    </div>
-</body>
+            #calculator {
+                background-color: #ffffff;
+                max-width: 400px;
+                margin: 50px auto;
+                padding: 20px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+            h3 {
+                color: #333;
+            }
+            #exp {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            #result {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            #calculate-button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #calculate-button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+        <script>
+            function calculate() {
+                let exp = document.getElementById("exp");
+                let result = document.getElementById("result");
+                try {
+                    result.value = eval(exp.value);
+                } catch (error) {
+                    result.value = "잘못된 입력입니다";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="calculator">
+            <h3>계산기</h3>
+            <hr>
+            <p>계산하고자 하는 수식을 입력하고 계산 버튼을 누르시오.</p>
+            <form>
+                <input type="text" id="exp" placeholder="수식입력">
+                <input type="text" id="result" placeholder="결과" >
+                <input type="button" value="Calculate" id="calculate-button" onclick="calculate()">
+            </form>
+        </div>
+    </body>
 </html>
